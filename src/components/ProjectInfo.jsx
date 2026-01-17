@@ -15,8 +15,12 @@ const ProjectInfo = ({ title, desc, img, live="", git=""}) => {
 
             {/* Project Links */}
             <div className='flex flex-col gap-5 mt-4'>
+              {live && (
                 <a href={live} target='_blank' rel="noopener noreferrer" className='underline decoration-blue-400 decoration-4 hover:bg-blue-400 hover:text-white transition duration-500 w-fit p-2'>LIVE WEBSITE</a>
+              )}
+              {git && (
                 <a href={git} target='_blank' rel="noopener noreferrer" className='underline decoration-blue-400 decoration-4 hover:bg-blue-400 hover:text-white transition duration-500 w-fit p-2'>LEARN MORE</a>
+              )}
             </div>
         </div>
     </div>
