@@ -27,7 +27,7 @@ function App() {
       />
 
       <div ref={homeRef}>
-        <Hero />
+        <Hero scrollToRef={aboutRef}/>
       </div>
 
       <Navbar
@@ -48,7 +48,7 @@ function App() {
       <div ref={contactRef}>
         <Contact />
       </div>
-      
+
       <Footer />
     </div>
   )
