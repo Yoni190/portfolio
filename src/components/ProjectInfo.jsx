@@ -4,7 +4,7 @@ const ProjectInfo = ({ title, desc, img, live="", git}) => {
   return (
     <div className='flex justify-center mt-5'>
         {/* Project Image */}
-        <div>
+        <div className='relative'>
             <img src={img} alt={title} width={1000}/>
         </div>
 
