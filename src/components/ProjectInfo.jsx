@@ -1,15 +1,15 @@
 import React from 'react'
 
-const ProjectInfo = ({ title, desc, img, live="", git=""}) => {
+const ProjectInfo = ({ title, desc, img, live="", git="", index}) => {
   return (
-    <div className='flex justify-center mt-5'>
+    <div className={`flex ${index % 2 ? 'flex-row-reverse' : 'flex-row'} justify-center mt-5`}>
         {/* Project Image */}
         <div className='relative'>
             <img src={img} alt={title} width={1000}/>
         </div>
 
         {/* Project Info */}
-        <div className='p-5 w-1/4'>
+        <div className='p-5 w-1/4 flex flex-col justify-center'>
             <h1 className='font-semibold text-xl'>{title}</h1>
             <p className='mt-2'>{desc}</p>
 
