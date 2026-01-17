@@ -5,7 +5,9 @@ const ProjectInfo = ({ title, desc, img, live="", git="", index}) => {
     <div className={`flex ${index % 2 ? 'flex-row-reverse' : 'flex-row'} justify-center mt-5`}>
         {/* Project Image */}
         <div className='relative'>
-            <img src={img} alt={title} width={1000}/>
+            <a href={live ? live : git} target='_blank' rel='noopener noreferrer'>
+              <img src={img} alt={title} width={1000} className='hover:scale-80 transition duration-500'/>
+            </a>
         </div>
 
         {/* Project Info */}
