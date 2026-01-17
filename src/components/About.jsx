@@ -30,7 +30,7 @@ const About = () => {
             {/* Skills section */}
             <div className='flex gap-5  grid grid-cols-4'>
                 {skills.map((skill) => (
-                    <div key={skill.name} className='border rounded p-4 flex flex-col items-center hover:shadow-xl transition duration-500'>
+                    <div key={skill.name} className='border rounded p-4 flex flex-col items-center hover:scale-110 hover:shadow-[0_0_20px_rgba(96,165,250,0.7)] transition duration-500'>
                         <img src={skill.img} alt={skill.name} width="50"/>
                         <p className='text-center'>{skill.name}</p>
                     </div>
