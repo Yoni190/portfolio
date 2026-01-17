@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProjectInfo = ({ title, desc, img, live="", git}) => {
+const ProjectInfo = ({ title, desc, img, live="", git=""}) => {
   return (
     <div className='flex justify-center mt-5'>
         {/* Project Image */}
@@ -9,14 +9,14 @@ const ProjectInfo = ({ title, desc, img, live="", git}) => {
         </div>
 
         {/* Project Info */}
-        <div className='p-5'>
+        <div className='p-5 w-1/4'>
             <h1 className='font-semibold text-xl'>{title}</h1>
             <p className='mt-2'>{desc}</p>
 
             {/* Project Links */}
             <div className='flex flex-col gap-5 mt-4'>
-                <a href={live} target='_blank' className='underline decoration-blue-400 decoration-4 hover:bg-blue-400 hover:text-white transition duration-500 w-fit p-2'>LIVE WEBSITE</a>
-                <a href={git} target='_blank' className='underline decoration-blue-400 decoration-4 hover:bg-blue-400 hover:text-white transition duration-500 w-fit p-2'>LEARN MORE</a>
+                <a href={live} target='_blank' rel="noopener noreferrer" className='underline decoration-blue-400 decoration-4 hover:bg-blue-400 hover:text-white transition duration-500 w-fit p-2'>LIVE WEBSITE</a>
+                <a href={git} target='_blank' rel="noopener noreferrer" className='underline decoration-blue-400 decoration-4 hover:bg-blue-400 hover:text-white transition duration-500 w-fit p-2'>LEARN MORE</a>
             </div>
         </div>
     </div>
