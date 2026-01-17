@@ -7,8 +7,8 @@ const Projects = () => {
         {title: 'Servant', desc: 'A website that keeps track of services used for your projects.', live: "https://servant-gamma.vercel.app/", git: "https://github.com/Yoni190/servant", img: ServantImage}
     ]
   return (
-    <div className='mt-4'>
-        <h2 className='text-2xl text-center'>Projects</h2>
+    <div className='mt-10'>
+        <h2 className='text-4xl text-center'>Projects</h2>
         {projects.map((project) => (
             <div key={project.title} className='mt-3'>
                 <ProjectInfo

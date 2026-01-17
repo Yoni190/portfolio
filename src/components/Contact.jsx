@@ -2,8 +2,8 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className='mt-4'>
-        <h2 className='text-2xl text-center'>Contact</h2>
+    <div className='mt-10'>
+        <h2 className='text-4xl text-center'>Contact</h2>
         <p className='text-center text-xl mt-4'>Have a question or want to work together? Leave your <br />details and I'll get back to you as soon as possible.</p>
 
         <form action="" className='flex flex-col w-1/4 mx-auto gap-1 mt-2'>
