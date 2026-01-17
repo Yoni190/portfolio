@@ -349,11 +349,12 @@ export default function PixelSnow({
     colorVector
   ]);
 
-  return (
-    <div
-      ref={containerRef}
-      className={`absolute inset-0 w-full h-full transform-gpu will-change-transform backface-hidden ${className}`}
-      style={style}
-    />
-  );
+return (
+  <div
+    ref={containerRef}
+    className={`fixed inset-0 w-screen h-screen -z-10 pointer-events-none ${className}`}
+    style={style}
+  />
+);
+
 }
