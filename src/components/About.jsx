@@ -22,10 +22,10 @@ const About = () => {
     <div className='py-10 bg-black text-white'>
         <h2 className='text-4xl text-center font-bold'>About</h2>
 
-        <div className='flex justify-center gap-3 mt-5'>
+        <div className='flex justify-center gap-10 mt-5'>
             {/* Paragraph Section */}
-            <div className='w-1/2'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum sunt debitis ratione voluptates, odio iusto voluptatem dicta doloribus veritatis ab fuga non nobis enim recusandae, ex eius ad, quis facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis hic quae tempora accusantium nostrum veniam nam totam blanditiis ullam voluptatem temporibus tempore nesciunt a eos veritatis enim soluta, ipsa nemo! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo esse quia atque aspernatur, nesciunt quaerat dignissimos? Libero sequi dolores minus ut architecto voluptate incidunt nam culpa, itaque ad rem eligendi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione laudantium id quas fugit error, excepturi et ipsum iure nam magni, obcaecati similique at commodi iste, ipsa mollitia ipsam. Eius, dolor.
+            <div className='w-1/4'>
+                <p className='text-xl'>I’m Yonatan, a Full Stack Developer passionate about building clean, scalable, and modern web applications. With experience in both frontend and backend technologies, I enjoy turning ideas into interactive, user-friendly solutions. I thrive in problem-solving, love learning new tools and frameworks, and take pride in writing code that is both efficient and maintainable.</p>
             </div>
             {/* Skills section */}
             <div className='flex gap-5  grid grid-cols-4'>
