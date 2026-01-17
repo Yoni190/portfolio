@@ -9,7 +9,7 @@ const Footer = () => {
             <a href="https://github.com/Yoni190" target='_blank'><img src={GithubImage} alt="Github" width={40} className='hover:scale-110 transition duration-300' /></a>
             <a href="mailto:yonatanadhanom00@gmail.com" target='_blank'><img src={EmailImage} alt="Email" width={40} className='hover:scale-110 transition duration-300' /></a>
         </div>
-        <p className='text-white text-sm'>Yonatan Adhanom @ 2026</p>
+        <p className='text-white text-sm'>Yonatan Adhanom © {new Date().getFullYear()}</p>
     </div>
   )
 }
