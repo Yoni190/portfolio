@@ -9,6 +9,8 @@ const Contact = () => {
         message: ''
     })
 
+    const [statusMessage, setStatusMessage] = useState('')
+    const [statusType, setStatusType] = useState('')
 
     const handleChange = (e) => {
         setFormData({
@@ -26,19 +28,22 @@ const Contact = () => {
         const publicKey = 'TS7SQRI0b4PCC3l9o'
 
         emailjs.send(serviceId, templateId, formData, publicKey)
-            .then((response) => {
-                console.log(`Success`, response.status, response.text)
-                setFormData({name: '', email: '', message: ''})
-            }, (err) => {
-                console.log('Failed')
+            .then(() => {
+                emailjs.send(serviceId, autoReplyId, formData, publicKey)
+                .then(() => {
+                    setStatusMessage('Message sent successfully!')
+                    setStatusType('success')
+                    setFormData({name: '', email: '', message: ''})
+                })
+                .catch(() => {
+                    setStatusMessage('Failed to send confirmation email.')
+                    setStatusType('error')
+                })
             })
-
-        emailjs.send(serviceId, autoReplyId, formData, publicKey)
-            .then((response) => {
-                console.log('Confirmation email sent!', response.status, response.text);
-            }, (err) => {
-                console.log('Failed to send confirmation email...', err);
-            });
+            .catch(() => {
+                setStatusMessage('Failed to send message. Please try again.')
+                setStatusType('error')
+            })
     }
   return (
     <div className='py-10 bg-black text-white'>
@@ -72,7 +77,11 @@ const Contact = () => {
                 rows="5">
             </textarea>
 
-            <p></p>
+            {statusMessage && (
+                <p className={`mt-2 ${statusType === 'success' ? 'text-green-400' : 'text-red-500'}`}>
+                    {statusMessage}
+                </p>
+                )}
 
 
             <div className='flex justify-end'>
