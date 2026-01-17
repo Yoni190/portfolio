@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className='mt-10'>
+    <div className='py-10 bg-black text-white'>
         <h2 className='text-4xl text-center'>Contact</h2>
         <p className='text-center text-xl mt-4'>Have a question or want to work together? Leave your <br />details and I'll get back to you as soon as possible.</p>
 

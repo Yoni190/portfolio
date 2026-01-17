@@ -3,8 +3,8 @@ import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
-import PixelSnow from "./components/PixelSnow"
 import Projects from "./components/Projects"
+import PixelSnow from "./components/PixelSnow"
 
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
     <div>
       <PixelSnow
         pixelResolution={500}
+        className='z-0'
       />
       <Hero />
       <Navbar />
