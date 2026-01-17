@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
 
@@ -7,6 +8,7 @@ const Contact = () => {
         email: '',
         message: ''
     })
+
 
     const handleChange = (e) => {
         setFormData({
@@ -18,9 +20,25 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        setFormData({name: '', email: '', message: ''})
+        const serviceId = 'service_8thgbb9'
+        const templateId = 'template_wn3b5pd'
+        const autoReplyId = 'template_34l1l2l'
+        const publicKey = 'TS7SQRI0b4PCC3l9o'
 
-        console.log('Email sent!')
+        emailjs.send(serviceId, templateId, formData, publicKey)
+            .then((response) => {
+                console.log(`Success`, response.status, response.text)
+                setFormData({name: '', email: '', message: ''})
+            }, (err) => {
+                console.log('Failed')
+            })
+
+        emailjs.send(serviceId, autoReplyId, formData, publicKey)
+            .then((response) => {
+                console.log('Confirmation email sent!', response.status, response.text);
+            }, (err) => {
+                console.log('Failed to send confirmation email...', err);
+            });
     }
   return (
     <div className='py-10 bg-black text-white'>
@@ -53,6 +71,8 @@ const Contact = () => {
                 className='border p-2 resize-none'
                 rows="5">
             </textarea>
+
+            <p></p>
 
 
             <div className='flex justify-end'>
