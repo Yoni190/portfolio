@@ -9,7 +9,7 @@ const Projects = () => {
         {title: 'Drzn', desc: 'An e-commerce website serving customers in Riyadh, offering a wide range of products online. Users can browse categories, view product details, add items to their cart, and complete purchases through a secure checkout process.', live: "https://drzn.sa", img: DrznImage}
     ]
   return (
-    <div className='py-10 bg-black text-white'>
+    <div className='py-20 bg-black text-white'>
         <h2 className='text-4xl text-center font-bold'>Projects</h2>
         {projects.map((project, index) => (
             <div key={project.title} className='mt-3'>

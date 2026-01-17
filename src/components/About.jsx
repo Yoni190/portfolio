@@ -19,7 +19,7 @@ const About = () => {
         {name: 'Git', img: GitImage},
     ]
   return (
-    <div className='py-10 bg-black text-white'>
+    <div className='py-20 bg-black text-white'>
         <h2 className='text-4xl text-center font-bold'>About</h2>
 
         <div className='flex justify-center gap-10 mt-5'>
