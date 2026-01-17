@@ -12,8 +12,8 @@ const ProjectInfo = ({ title, desc, img, live="", git="", index}) => {
 
         {/* Project Info */}
         <div className='p-5 w-1/4 flex flex-col justify-center'>
-            <h1 className='font-semibold text-xl'>{title}</h1>
-            <p className='mt-2'>{desc}</p>
+            <h1 className='font-semibold text-4xl'>{title}</h1>
+            <p className='mt-2 text-lg'>{desc}</p>
 
             {/* Project Links */}
             <div className='flex flex-col gap-5 mt-4'>
