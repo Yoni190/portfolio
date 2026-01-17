@@ -20,7 +20,7 @@ const About = () => {
     ]
   return (
     <div className='py-10 bg-black text-white'>
-        <h2 className='text-4xl text-center'>About</h2>
+        <h2 className='text-4xl text-center font-bold'>About</h2>
 
         <div className='flex justify-center gap-3 mt-5'>
             {/* Paragraph Section */}

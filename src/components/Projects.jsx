@@ -10,7 +10,7 @@ const Projects = () => {
     ]
   return (
     <div className='py-10 bg-black text-white'>
-        <h2 className='text-4xl text-center'>Projects</h2>
+        <h2 className='text-4xl text-center font-bold'>Projects</h2>
         {projects.map((project, index) => (
             <div key={project.title} className='mt-3'>
                 <ProjectInfo
