@@ -40,7 +40,7 @@ const About = () => {
                             key={skill.name}
                             className='border rounded p-4 flex flex-col items-center hover:scale-110 hover:shadow-[0_0_20px_rgba(96,165,250,0.7)] transition duration-500'
                         >
-                            <img src={skill.img} alt={skill.name} width="50" className='mb-2'/>
+                            <img src={skill.img} alt={skill.name} width="50" height="50" loading="lazy" className='mb-2'/>
                             <p className='text-center'>{skill.name}</p>
                         </div>
                     ))}
