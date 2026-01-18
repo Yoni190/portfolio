@@ -21,10 +21,22 @@ function App() {
 
   return (
     <div>
-      <PixelSnow
-        pixelResolution={500}
+      <PixelSnow 
+        color="#ffffff"
+        flakeSize={0.01}
+        minFlakeSize={1.25}
+        pixelResolution={190}
+        speed={1.25}
+        density={0.25}
+        direction={125}
+        brightness={1}
+        depthFade={8}
+        farPlane={20}
+        gamma={0.4545}
+        variant="square"
         className='z-0'
       />
+
 
       <div ref={homeRef}>
         <Hero scrollToRef={aboutRef}/>
