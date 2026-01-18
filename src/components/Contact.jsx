@@ -46,11 +46,15 @@ const Contact = () => {
             })
     }
   return (
-    <div className='py-10 bg-black text-white'>
-        <h2 className='text-4xl text-center font-bold'>Contact</h2>
-        <p className='text-center text-xl mt-4'>Have a question or want to work together? Leave your <br />details and I'll get back to you as soon as possible.</p>
+    <div className='py-10 bg-black text-white px-4'>
+        <h2 className='text-3xl md:text-4xl text-center font-bold'>Contact</h2>
+        <p className='text-center text-lg md:text-xl mt-4 px-4'>
+          Have a question or want to work together? 
+          <span className='hidden md:inline'><br /></span>{' '}
+          Leave your details and I'll get back to you as soon as possible.
+        </p>
 
-        <form onSubmit={handleSubmit} className='flex flex-col w-1/4 mx-auto gap-1 mt-2'>
+        <form onSubmit={handleSubmit} className='flex flex-col w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto gap-3 mt-6'>
             <input
                 type="text"
                 name="name"
@@ -58,7 +62,8 @@ const Contact = () => {
                 placeholder='Name' 
                 value={formData.name}
                 onChange={handleChange}
-                className='border p-2'/>
+                className='border border-gray-600 bg-gray-900 text-white p-3 rounded focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400'
+                required/>
             <input
                 type="email"
                 name="email"
@@ -66,26 +71,28 @@ const Contact = () => {
                 placeholder='Email'
                 value={formData.email}
                 onChange={handleChange}
-                className='border p-2'/>
+                className='border border-gray-600 bg-gray-900 text-white p-3 rounded focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400'
+                required/>
             <textarea
                 name="message"
                 id="message"
                 placeholder='Message'
                 value={formData.message}
                 onChange={handleChange}
-                className='border p-2 resize-none'
-                rows="5">
+                className='border border-gray-600 bg-gray-900 text-white p-3 rounded resize-none focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400'
+                rows="5"
+                required>
             </textarea>
 
             {statusMessage && (
-                <p className={`mt-2 ${statusType === 'success' ? 'text-green-400' : 'text-red-500'}`}>
+                <p className={`mt-2 text-sm md:text-base ${statusType === 'success' ? 'text-green-400' : 'text-red-500'}`}>
                     {statusMessage}
                 </p>
                 )}
 
 
             <div className='flex justify-end'>
-                <button type='submit' className='underline decoration-blue-400 decoration-4 hover:bg-blue-400 hover:text-white transition duration-500 w-fit p-2'>SUBMIT</button>
+                <button type='submit' className='underline decoration-blue-400 decoration-4 hover:bg-blue-400 hover:text-white transition duration-500 w-fit p-2 rounded'>SUBMIT</button>
             </div>
         </form>
     </div>
