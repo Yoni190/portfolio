@@ -5,7 +5,7 @@ import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import Projects from "./components/Projects"
 import PixelSnow from "./components/PixelSnow"
-import { useRef } from "react"
+import { useRef, useMemo } from "react"
 
 
 function App() {
@@ -19,7 +19,8 @@ function App() {
       ref.current.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
+    // Memoize mobile detection to avoid checking on every render
+    const isMobile = useMemo(() => /Mobi|Android|iPhone/i.test(navigator.userAgent), []);
 
   return (
     <div>
