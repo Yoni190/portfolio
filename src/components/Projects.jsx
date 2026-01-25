@@ -10,7 +10,7 @@ const Projects = () => {
   const projects = [
     {
       title: 'Servant',
-      desc: 'A website that keeps track of services used for your projects.',
+      desc: 'A smart system designed to help users manage the third-party services used across different projects they are working on. By centralizing service tracking and project management, it ensures that all projects remain organized, transparent, and easy to maintain.',
       live: "https://servant-gamma.vercel.app/",
       git: "https://github.com/Yoni190/servant",
       img: ServantImage
