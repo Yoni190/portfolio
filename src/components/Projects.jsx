@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import ProjectInfo from './ProjectInfo'
 import TahurImage from '../assets/tahur.png'
 import DrznImage from '../assets/drzn.png'
+import HMTImage from '../assets/hmt.png'
 
 const Projects = () => {
   const sectionRef = useRef(null)
@@ -19,6 +20,13 @@ const Projects = () => {
       desc: 'An e-commerce website serving customers in Riyadh, offering a wide range of products online. Users can browse categories, view product details, add items to their cart, and complete purchases through a secure checkout process.',
       live: "https://drzn.sa",
       img: DrznImage
+    },
+    {
+      title: 'Home Maintenance Tracker',
+      desc: 'A full-stack web application that helps homeowners organize recurring maintenance tasks, organize them into categories, track recurring schedules, and upgrade to a premium plan for unlimited usage.',
+      live: 'https://home-maintenance-tracker-ui.vercel.app/',
+      git: 'https://github.com/Yoni190/home-maintenance-tracker',
+      img: HMTImage
     }
   ]
 
