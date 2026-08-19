@@ -1,7 +1,4 @@
 import { useEffect, useRef, useState } from "react"
-import HtmlImage from '../assets/html.png'
-import CssImage from '../assets/css.png'
-import JsImage from '../assets/js.png'
 import ReactImage from '../assets/react.svg'
 import LaravelImage from '../assets/laravel.svg'
 import MysqlImage from '../assets/mysql.png'
