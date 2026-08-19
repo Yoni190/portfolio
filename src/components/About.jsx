@@ -6,20 +6,24 @@ import ReactImage from '../assets/react.svg'
 import LaravelImage from '../assets/laravel.svg'
 import MysqlImage from '../assets/mysql.png'
 import GitImage from '../assets/git.png'
+import AspImage from '../assets/asp-net-core.png'
+import SQLServerImage from '../assets/sql-server.png'
+import PostgreImage from '../assets/postgre.png'
+import LinuxImage from '../assets/linux.png'
 
 const About = () => {
   const sectionRef = useRef(null)
   const [visible, setVisible] = useState(false)
 
   const skills = [
-    { name: 'HTML', img: HtmlImage },
-    { name: 'CSS', img: CssImage },
-    { name: 'JS', img: JsImage },
-    { name: 'React', img: ReactImage },
     { name: 'Laravel', img: LaravelImage },
     { name: 'MySQL', img: MysqlImage },
-    { name: 'React Native', img: ReactImage },
+    { name: 'ASP.NET Core', img: AspImage },
+    { name: 'SQL Server', img: SQLServerImage },
+    { name: 'PostgreSQL', img: PostgreImage },
     { name: 'Git', img: GitImage },
+    { name: 'Linux', img: LinuxImage },
+    { name: 'React', img: ReactImage },
   ]
 
   useEffect(() => {
