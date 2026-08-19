@@ -53,12 +53,7 @@ const About = () => {
         <div className="container mx-auto mt-10 flex flex-col lg:flex-row gap-10 px-5">
           {/* Paragraph */}
           <div className="lg:w-1/2 text-xl leading-relaxed">
-            <p>
-              I’m Yonatan, a Full Stack Developer passionate about building clean,
-              scalable, and modern web applications. With experience in both
-              frontend and backend technologies, I enjoy turning ideas into
-              interactive, user-friendly solutions.
-            </p>
+            <p> I'm Yonatan, a Backend Developer passionate about architecting robust, scalable systems and writing clean, maintainable code. With a strong foundation in server-side development, I specialize in building secure APIs, optimizing database performance, and crafting efficient business logic that powers seamless digital experiences. </p>
           </div>
 
           {/* Skills */}
