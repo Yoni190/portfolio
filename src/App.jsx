@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar"
 import Projects from "./components/Projects"
 import PixelSnow from "./components/PixelSnow"
 import { useRef, useMemo } from "react"
+import { Analytics } from "@vercel/analytics/next"
 
 
 function App() {
